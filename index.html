@@ -5,51 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI</title>
     <style>
-        body{
+        /* Apply a card-like structure to the whole page */
+        body {
             display: flex;
             justify-content: center;
-            padding: 50px;
-            
-
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
         }
-        .m1{
-            display: flex;
 
+        .card {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .m1 {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             padding: 20px;
-            background-color: cadetblue;
-            
-
         }
-        .he{
+
+        .he {
             padding: 10px;
         }
-        #myDiv{
-            padding: 4px;
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .bt {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        button {
+            border: none;
+            background-color: rgb(19, 192, 19);
+            color: white;
+            height: 35px;
+            width: 80px;
+            border-radius: 5px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(15, 160, 15);
+        }
+
+        /* Result card style */
+        #myDiv {
+            padding: 20px;
             text-align: center;
             background-color: cadetblue;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #myDiv h2 {
+            margin: 0;
+        }
+
+        #myDiv h4 {
+            margin: 10px 0 0;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <div style="border: 1px solid black; width: 50%; background-color: cadetblue;">
-    <div class="m1">
-        <div>
-        <h1 style="text-align: center;">BMI Calculator</h1>
-        <div class="he">
-            <label for="">Height</label>
-            <input type="text" id="he">
+    <div class="card">
+        <div class="m1">
+            <h1>BMI Calculator</h1>
+            <div class="he">
+                <label for="he">Height (cm)</label>
+                <input type="text" id="he" pattern="^\d+(\.\d+)?$">
+            </div>
+            <div class="he">
+                <label for="we">Weight (kg)</label>
+                <input type="text" id="we" pattern="^\d+(\.\d+)?$">
+            </div>
         </div>
-        <div class="he">
-            <label for="">Weight</label>
-            <input type="text" id="we">
+
+        <div class="bt">
+            <button id="btn">Submit</button>
         </div>
     </div>
-    
-   
-</div>
-<div class="bt" style="display: flex; justify-content: center; padding: 10px; background-color: cadetblue;"><button id="btn" style="border: none ; background-color: rgb(19, 192, 19); color:  white; height: 35px; width: 80px; border-radius: 5px; font-weight: bolder;">Submit</button></div>
-</div>
+
     <script src="script.js"></script>
 </body>
 </html>
