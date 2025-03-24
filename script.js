@@ -23,7 +23,7 @@ btn.addEventListener("click", function() {
    
     let color;
     if (BMI < 18.5) {
-        color = "yellow"; 
+        color = "rgb(255, 174, 66) "; 
     } else if (BMI >= 18.5 && BMI < 24.9) {
         color = "green";  
     } else {
